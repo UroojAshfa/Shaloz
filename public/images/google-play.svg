@@ -1,0 +1,61 @@
+<svg
+  width="180"
+  height="54"
+  viewBox="0 0 180 54"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background -->
+  <rect
+    x="0"
+    y="0"
+    width="180"
+    height="54"
+    rx="8"
+    fill="#2F2F2F"
+  />
+
+  <!-- Google Play Icon -->
+  <!-- Left triangle -->
+  <polygon
+    points="22,10 22,44 40,27"
+    fill="#00E676"
+  />
+  <!-- Top triangle -->
+  <polygon
+    points="40,27 22,10 48,24"
+    fill="#00BCD4"
+  />
+  <!-- Bottom triangle -->
+  <polygon
+    points="40,27 22,44 48,30"
+    fill="#FFC107"
+  />
+  <!-- Right triangle -->
+  <polygon
+    points="40,27 48,24 48,30"
+    fill="#FF3D00"
+  />
+
+  <!-- Text -->
+  <text
+    x="64"
+    y="22"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="9"
+    fill="#BDBDBD"
+    letter-spacing="0.5"
+  >
+    GET IT ON
+  </text>
+
+  <text
+    x="64"
+    y="38"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="16"
+    font-weight="700"
+    fill="#FFFFFF"
+  >
+    Google Play
+  </text>
+</svg>

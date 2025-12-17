@@ -1,0 +1,101 @@
+:root {
+  /* Brand colors */
+  --shz-color-brand: #3e63ff;
+  --shz-color-brand-dark: #1b3adb;
+  --shz-color-header-bg-start: #050509;
+  --shz-color-header-bg-end: #0b0b10;
+  --shz-color-footer-bg: #050509;
+
+  /* Text colors */
+  --shz-color-text-main: #020617; /* slate-950-ish */
+  --shz-color-text-muted: #64748b;
+  --shz-color-text-soft: #94a3b8;
+
+  /* Surfaces */
+  --shz-surface-card: #ffffff;
+  --shz-surface-muted: #f8fafc;
+  --shz-surface-elevated: #ffffff;
+
+  /* Radii */
+  --shz-radius-xs: 9999px;
+  --shz-radius-sm: 0.75rem;
+  --shz-radius-md: 1.5rem;
+  --shz-radius-lg: 2rem;
+
+  /* Shadows */
+  --shz-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Generic cards and sections */
+.shz-section-card {
+  border-radius: var(--shz-radius-md);
+  background-color: var(--shz-surface-card);
+  box-shadow: var(--shz-shadow-soft);
+}
+
+.shz-card-soft {
+  border-radius: var(--shz-radius-sm);
+  background-color: var(--shz-surface-card);
+  box-shadow: var(--shz-shadow-soft);
+}
+
+/* Primary button */
+.shz-btn-primary {
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3e63ff, #5f8bff);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease, opacity 0.12s ease;
+}
+
+.shz-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.6);
+  opacity: 0.96;
+}
+
+.shz-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.4);
+}
+
+/* Ghost pill buttons / chips (used on FAQ filters, tags, etc.) */
+.shz-pill {
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background-color: #ffffff;
+  color: var(--shz-color-text-muted);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.shz-pill--active {
+  border-color: var(--shz-color-brand);
+  background: var(--shz-color-brand);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(62, 99, 255, 0.38);
+}
+
+/* FAQ accordion card wrapper */
+.shz-faq-item {
+  border-radius: var(--shz-radius-sm);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.shz-faq-item summary {
+  list-style: none;
+}
+
+.shz-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+
