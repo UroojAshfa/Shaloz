@@ -5,7 +5,7 @@ import { MapPin, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Hero() {
   const [pickupLocation, setPickupLocation] = useState('404, Juniper Blvd S');
@@ -13,109 +13,110 @@ export default function Hero() {
   const [packageWeight, setPackageWeight] = useState('');
 
   return (
-    <section className="container mx-auto px-4 py-12 lg:py-20">
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        {/* Left Column - Form */}
-        <div>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-8">
-            Fast, Secure and
-            <br />
-            Hassle-Free
-            <br />
-            <span style={{
-        background: 'linear-gradient(to bottom, #14248A, #14248A, #2642FF)',
-        WebkitBackgroundClip: 'text',
-        color: 'transparent',
-      }}>Package Delivery</span>
-          </h1>
+    <section className="w-full py-10 sm:py-14 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
-          <Card className="p-8 space-y-6 bg-white border-0 shadow-xl rounded-3xl">
-            {/* Pickup Location */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <MapPin className="w-4 h-4 text-[#2642FF]" fill="#2642FF" />
-                <span>Pickup Location</span>
-              </div>
-              <div className="relative">
-                <Input
-                  type="text"
-                  value={pickupLocation}
-                  onChange={(e) => setPickupLocation(e.target.value)}
-                  className="bg-gray-50 border-0 h-12 pr-10 text-gray-900"
-                />
-                <MapPin className="w-4 h-4 text-[#2642FF] absolute right-3 top-1/2 -translate-y-1/2" fill="#2642FF" />
-              </div>
-            </div>
+          {/* Left Column */}
+          <div>
+            <h1 className="text-[30px] sm:text-[36px] lg:text-[48px] xl:text-[56px] font-bold leading-tight mb-6">
+              Fast, Secure and
+              <span className="block">Hassle-Free</span>
+              <span
+                className="block"
+                style={{
+                  background:
+                    'linear-gradient(to bottom, #14248A, #14248A, #2642FF)',
+                  WebkitBackgroundClip: 'text',
+                  color: 'transparent',
+                }}
+              >
+                Package Delivery
+              </span>
+            </h1>
 
-            {/* Dropoff Location */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <MapPin className="w-4 h-4 text-[#2642FF]" fill="#2642FF" />
-                <span>Dropoff Location</span>
-              </div>
-              <div className="relative">
-                <Input
-                  type="text"
-                  value={dropoffLocation}
-                  onChange={(e) => setDropoffLocation(e.target.value)}
-                  className="bg-gray-50 border-0 h-12 pr-10 text-gray-900"
-                />
-                <MapPin className="w-4 h-4 text-[#2642FF] absolute right-3 top-1/2 -translate-y-1/2" fill="#2642FF" />
-              </div>
-            </div>
-
-            {/* Package Weight */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <Package className="w-4 h-4 text-[#2642FF]" />
-                <span>Package weight</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-gray-50 px-4 py-3 rounded-lg">
-                  <span className="text-sm text-gray-600 font-medium">lbs</span>
+            <Card className="bg-white border-0 shadow-xl rounded-3xl p-5 sm:p-6 lg:p-8 space-y-5">
+              
+              {/* Pickup */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                  <MapPin className="w-4 h-4 text-[#2642FF]" fill="#2642FF" />
+                  Pickup Location
                 </div>
-                <Input
-                  type="text"
-                  placeholder="Please enter the weight of your parcel here"
-                  value={packageWeight}
-                  onChange={(e) => setPackageWeight(e.target.value)}
-                  className="flex-1 bg-gray-50 border-0 h-12 placeholder:text-gray-400"
-                />
-              </div>
-            </div>
-
-            {/* See Price Button */}
-            <Button className="w-full bg-gradient-to-b from-[#2642FF] via-[#2642FF] to-[#14248A] text-white h-14 text-base font-semibold rounded-full">
-              See Price
-            </Button>
-          </Card>
-        </div>
-
-        {/* Right Column - Image Card */}
-        <div className="relative">
-          <Card className="overflow-hidden border-0 shadow-2xl rounded-[2rem]">
-            <div className="aspect-square relative">
-              {/* Background cityscape and illustration would go here */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                {/* Placeholder for illustration - replace with actual image */}
-                <div className="flex-1 flex items-center justify-center">
-                  <div className="text-white/30 text-center text-sm">
-                  <Image src="/images/image.png" alt="Delivery" fill className="object-contain" />
-                  </div>
+                <div className="relative">
+                  <Input
+                    value={pickupLocation}
+                    onChange={(e) => setPickupLocation(e.target.value)}
+                    className="bg-gray-50 border-0 h-11 pr-10"
+                  />
+                  <MapPin className="w-4 h-4 text-[#2642FF] absolute right-3 top-1/2 -translate-y-1/2" />
                 </div>
+              </div>
 
-                {/* Bottom Section */}
-                <div className="flex items-center justify-between bg-white/10 backdrop-blur-md rounded-2xl p-4">
-                  <div className="text-white">
-                    <p className="font-semibold text-base lg:text-lg">Grow With Every Delivery</p>
+              {/* Dropoff */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                  <MapPin className="w-4 h-4 text-[#2642FF]" fill="#2642FF" />
+                  Dropoff Location
+                </div>
+                <div className="relative">
+                  <Input
+                    value={dropoffLocation}
+                    onChange={(e) => setDropoffLocation(e.target.value)}
+                    className="bg-gray-50 border-0 h-11 pr-10"
+                  />
+                  <MapPin className="w-4 h-4 text-[#2642FF] absolute right-3 top-1/2 -translate-y-1/2" />
+                </div>
+              </div>
+
+              {/* Weight */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                  <Package className="w-4 h-4 text-[#2642FF]" />
+                  Package Weight
+                </div>
+                <div className="flex gap-3">
+                  <div className="bg-gray-50 px-4 py-3 rounded-lg text-sm font-medium text-gray-600">
+                    lbs
                   </div>
-                  <Button className="bg-[#2642FF] hover:bg-[#14248A] text-white font-semibold px-6 py-2 rounded-lg shadow-lg">
+                  <Input
+                    placeholder="Enter package weight"
+                    value={packageWeight}
+                    onChange={(e) => setPackageWeight(e.target.value)}
+                    className="bg-gray-50 border-0 h-11"
+                  />
+                </div>
+              </div>
+
+              <Button className="w-full h-12 rounded-full bg-gradient-to-b from-[#2642FF] to-[#14248A] font-semibold">
+                See Price
+              </Button>
+            </Card>
+          </div>
+
+          {/* Right Column */}
+          <div className="relative">
+            <Card className="border-0 shadow-2xl rounded-[28px] overflow-hidden">
+              <div className="relative h-[280px] sm:h-[360px] lg:h-[420px]">
+                <Image
+                  src="/images/image.png"
+                  alt="Delivery"
+                  fill
+                  className="object-contain"
+                />
+
+                <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 flex items-center justify-between">
+                  <p className="text-white font-semibold text-sm sm:text-base">
+                    Grow With Every Delivery
+                  </p>
+                  <Button className="bg-[#2642FF] hover:bg-[#14248A] rounded-lg px-5">
                     Get started
                   </Button>
                 </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+          </div>
+
         </div>
       </div>
     </section>

@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { Apple, Smartphone } from 'lucide-react';
+
+import Image from 'next/image';
 
 export default function DownloadApp() {
   return (

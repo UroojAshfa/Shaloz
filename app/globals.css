@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Shaloz design tokens & shared styles */
-@import "./shaloz.css";
+/*@import "./shaloz.css"; */
 
 html,
 body {
